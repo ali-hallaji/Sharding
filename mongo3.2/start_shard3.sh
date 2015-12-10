@@ -2,19 +2,16 @@
 # chmod 777 -Rf to /data
 
 # clean everything up
-echo "killing mongod and mongos"
 export LC_ALL=C
+echo "killing mongod and mongos"
 killall mongod
 killall mongos
 sleep 30
-echo "removing data files"
-rm -rf /data/*
 
 # For mac make sure rlimits are high enough to open all necessary connections
 ulimit -n 2048
 
 # start a replica set and tell it that it will be shard0
-mkdir -p /data/shard1/rs0 /data/shard1/rs1 /data/shard1/rs2
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_1 --logpath "shard3_1_01.log" --dbpath /data/shard1/rs0 --port 37017 --fork --shardsvr --smallfiles
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_1 --logpath "shard3_1_02.log" --dbpath /data/shard1/rs1 --port 37018 --fork --shardsvr --smallfiles
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_1 --logpath "shard3_1_03.log" --dbpath /data/shard1/rs2 --port 37019 --fork --shardsvr --smallfiles
@@ -30,7 +27,6 @@ rs.initiate(config)
 EOF
 
 # start a replicate set and tell it that it will be a shard1
-mkdir -p /data/shard2/rs0 /data/shard2/rs1 /data/shard2/rs2
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_2 --logpath "shard3_2_01.log" --dbpath /data/shard2/rs0 --port 47017 --fork --shardsvr --smallfiles
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_2 --logpath "shard3_2_02.log" --dbpath /data/shard2/rs1 --port 47018 --fork --shardsvr --smallfiles
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_2 --logpath "shard3_2_03.log" --dbpath /data/shard2/rs2 --port 47019 --fork --shardsvr --smallfiles
@@ -46,7 +42,6 @@ rs.initiate(config)
 EOF
 
 # start a replicate set and tell it that it will be a shard3_3
-mkdir -p /data/shard3/rs0 /data/shard3/rs1 /data/shard3/rs2
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_3 --logpath "shard3_3_01.log" --dbpath /data/shard3/rs0 --port 57017 --fork --shardsvr --smallfiles
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_3 --logpath "shard3_3_02.log" --dbpath /data/shard3/rs1 --port 57018 --fork --shardsvr --smallfiles
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --replSet shard3_3 --logpath "shard3_3_03.log" --dbpath /data/shard3/rs2 --port 57019 --fork --shardsvr --smallfiles
@@ -63,6 +58,5 @@ EOF
 
 # now start 3 config servers
 rm cfg-c.log
-mkdir -p /data/config/config-c
 mongod --storageEngine=wiredTiger --wiredTigerCollectionBlockCompressor=zlib --wiredTigerDirectoryForIndexes --logpath "cfg-c.log" --dbpath /data/config/config-c --port 57042 --fork --configsvr --smallfiles
 
