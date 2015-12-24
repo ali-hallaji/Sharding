@@ -1,0 +1,142 @@
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] MongoDB starting : pid=5437 port=37017 dbpath=/data/shard3/rs0 64-bit host=hallaji
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] db version v3.2.0
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] git version: 45d947729a0315accb6d4f15a6b06be6d9c19fe7
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] allocator: tcmalloc
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] modules: none
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] build environment:
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten]     distmod: ubuntu1404
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten]     distarch: x86_64
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten]     target_arch: x86_64
+2015-12-19T11:37:55.287+0330 I CONTROL  [initandlisten] options: { net: { port: 37017 }, processManagement: { fork: true }, replication: { replSet: "hallaji" }, sharding: { clusterRole: "shardsvr" }, storage: { dbPath: "/data/shard3/rs0" }, systemLog: { destination: "file", path: "shard_hallaji.log" } }
+2015-12-19T11:37:55.322+0330 I -        [initandlisten] Detected data files in /data/shard3/rs0 created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2015-12-19T11:37:55.322+0330 W -        [initandlisten] Detected unclean shutdown - /data/shard3/rs0/mongod.lock is not empty.
+2015-12-19T11:37:55.322+0330 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2015-12-19T11:37:55.322+0330 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=6G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2015-12-19T11:37:57.190+0330 I STORAGE  [initandlisten] Starting WiredTigerRecordStoreThread local.oplog.rs
+2015-12-19T11:37:57.190+0330 I STORAGE  [initandlisten] The size storer reports that the oplog contains 33657 records totaling to 11895828 bytes
+2015-12-19T11:37:57.361+0330 I STORAGE  [initandlisten] Sampling from the oplog between Dec 10 17:00:14:1 and Dec 13 15:39:49:1 to determine where to place markers for truncation
+2015-12-19T11:37:57.361+0330 I STORAGE  [initandlisten] Taking 2 samples and assuming that each section of oplog contains approximately 114103 records totaling to 40328896 bytes
+2015-12-19T11:37:57.641+0330 I CONTROL  [initandlisten] 
+2015-12-19T11:37:57.641+0330 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2015-12-19T11:37:57.641+0330 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-12-19T11:37:57.641+0330 I CONTROL  [initandlisten] 
+2015-12-19T11:37:57.641+0330 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2015-12-19T11:37:57.641+0330 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2015-12-19T11:37:57.641+0330 I CONTROL  [initandlisten] 
+2015-12-19T11:37:57.655+0330 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/shard3/rs0/diagnostic.data'
+2015-12-19T11:37:57.655+0330 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2015-12-19T11:37:57.655+0330 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "hallaji", version: 1, protocolVersion: 1, members: [ { _id: 0, host: "192.168.0.4:37017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 } } }
+2015-12-19T11:37:57.655+0330 I REPL     [ReplicationExecutor] This node is 192.168.0.4:37017 in the config
+2015-12-19T11:37:57.655+0330 I REPL     [ReplicationExecutor] transition to STARTUP2
+2015-12-19T11:37:57.655+0330 I REPL     [ReplicationExecutor] Starting replication applier threads
+2015-12-19T11:37:57.669+0330 I NETWORK  [initandlisten] waiting for connections on port 37017
+2015-12-19T11:37:57.669+0330 I REPL     [ReplicationExecutor] transition to RECOVERING
+2015-12-19T11:37:57.670+0330 I REPL     [ReplicationExecutor] transition to SECONDARY
+2015-12-19T11:37:57.670+0330 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2015-12-19T11:37:57.670+0330 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2015-12-19T11:37:57.726+0330 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 2
+2015-12-19T11:37:57.726+0330 I REPL     [ReplicationExecutor] transition to PRIMARY
+2015-12-19T11:37:58.029+0330 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2015-12-19T11:37:58.669+0330 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2015-12-19T11:38:04.092+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.52:35190 #1 (1 connection now open)
+2015-12-19T11:38:18.835+0330 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:47578 #2 (2 connections now open)
+2015-12-19T11:38:18.837+0330 I REPL     [conn2] replSetInitiate admin command received from client
+2015-12-19T11:38:18.886+0330 I NETWORK  [conn2] end connection 127.0.0.1:47578 (1 connection now open)
+2015-12-19T11:38:51.546+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:38714 #3 (2 connections now open)
+2015-12-19T11:38:51.547+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:38715 #4 (3 connections now open)
+2015-12-19T11:38:51.547+0330 I SHARDING [conn4] remote client 192.168.0.53:38715 initialized this host as shard hallaji
+2015-12-19T11:38:51.547+0330 I SHARDING [ShardingState initialization] first cluster operation detected, adding sharding hook to enable versioning and authentication to remote servers
+2015-12-19T11:38:51.548+0330 I SHARDING [ShardingState initialization] Updating config server connection string to: configReplSet/192.168.0.50:37041,192.168.0.50:37042,192.168.0.51:47041,192.168.0.51:47042,192.168.0.52:57041,192.168.0.52:57042
+2015-12-19T11:38:51.601+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for configReplSet/192.168.0.50:37041,192.168.0.50:37042,192.168.0.51:47041,192.168.0.51:47042,192.168.0.52:57041,192.168.0.52:57042
+2015-12-19T11:38:51.601+0330 I NETWORK  [ReplicaSetMonitorWatcher] starting
+2015-12-19T11:38:51.602+0330 I SHARDING [thread1] creating distributed lock ping thread for process hallaji:37017:1450512531:-1755872977 (sleeping for 30000ms)
+2015-12-19T11:38:51.604+0330 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to 192.168.0.50:37041
+2015-12-19T11:38:51.617+0330 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to 192.168.0.50:37041
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard1_1/192.168.0.50:37017,192.168.0.50:37018,192.168.0.50:37019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard1_2/192.168.0.50:47017,192.168.0.50:47018,192.168.0.50:47019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard1_3/192.168.0.50:57017,192.168.0.50:57018,192.168.0.50:57019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard2_1/192.168.0.51:37017,192.168.0.51:37018,192.168.0.51:37019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard2_2/192.168.0.51:47017,192.168.0.51:47018,192.168.0.51:47019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard2_3/192.168.0.51:57017,192.168.0.51:57018,192.168.0.51:57019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard3_1/192.168.0.52:37017,192.168.0.52:37018,192.168.0.52:37019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard3_2/192.168.0.52:47017,192.168.0.52:47018,192.168.0.52:47019
+2015-12-19T11:38:51.629+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for shard3_3/192.168.0.52:57017,192.168.0.52:57018,192.168.0.52:57019
+2015-12-19T11:38:51.630+0330 I NETWORK  [ShardingState initialization] Starting new replica set monitor for hallaji/192.168.0.4:37017
+2015-12-19T11:38:51.641+0330 W SHARDING [replSetDistLockPinger] pinging failed for distributed lock pinger :: caused by :: findAndModify query predicate didn't match any lock document
+2015-12-19T11:38:53.001+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:38737 #5 (4 connections now open)
+2015-12-19T11:39:00.664+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:38740 #6 (5 connections now open)
+2015-12-19T11:39:00.666+0330 I SHARDING [conn6] remotely refreshing metadata for INN.origins with requested shard version 10|0||56697beb5b82c9c90fc2673b, current shard version is 0|0||000000000000000000000000, current metadata version is 0|0||000000000000000000000000
+2015-12-19T11:39:00.739+0330 I SHARDING [conn6] collection INN.origins was previously unsharded, new metadata loaded with shard version 10|0||56697beb5b82c9c90fc2673b
+2015-12-19T11:39:00.739+0330 I SHARDING [conn6] collection version was loaded at version 10|1||56697beb5b82c9c90fc2673b, took 72ms
+2015-12-19T11:39:01.612+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.4:60466 #7 (6 connections now open)
+2015-12-19T11:39:01.648+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.50:47790 #8 (7 connections now open)
+2015-12-19T11:39:01.653+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.50:47802 #9 (8 connections now open)
+2015-12-19T11:39:01.657+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.51:37979 #10 (9 connections now open)
+2015-12-19T11:39:01.661+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.51:37989 #11 (10 connections now open)
+2015-12-19T11:39:01.664+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.51:37996 #12 (11 connections now open)
+2015-12-19T11:39:01.671+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.52:35240 #13 (12 connections now open)
+2015-12-19T11:39:01.672+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.52:35246 #14 (13 connections now open)
+2015-12-19T11:39:02.634+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:38749 #15 (14 connections now open)
+2015-12-19T11:39:02.635+0330 I SHARDING [conn15] remotely refreshing metadata for INN.destinations with requested shard version 10|0||56697bec5b82c9c90fc26740, current shard version is 0|0||000000000000000000000000, current metadata version is 0|0||000000000000000000000000
+2015-12-19T11:39:02.635+0330 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to 192.168.0.52:57042
+2015-12-19T11:39:02.685+0330 I ASIO     [NetworkInterfaceASIO-ShardRegistry-0] Successfully connected to 192.168.0.52:57041
+2015-12-19T11:39:03.066+0330 I SHARDING [conn15] collection INN.destinations was previously unsharded, new metadata loaded with shard version 10|0||56697bec5b82c9c90fc26740
+2015-12-19T11:39:03.066+0330 I SHARDING [conn15] collection version was loaded at version 10|1||56697bec5b82c9c90fc26740, took 431ms
+2015-12-19T11:39:03.078+0330 I COMMAND  [conn15] command INN.destinations command: find { find: "destinations", filter: { destination: "THR", arrival.scheduled: { $gt: new Date(1450525140300), $lt: new Date(1450569600000) }, belt: { $exists: false } }, projection: { origin: 1, flight_num: 1, destination_code: 1, arrival.scheduled: 1 }, shardVersion: [ Timestamp 10000|0, ObjectId('56697bec5b82c9c90fc26740') ] } planSummary: COLLSCAN keysExamined:0 docsExamined:16820 cursorExhausted:1 keyUpdates:0 writeConflicts:0 numYields:131 nreturned:0 reslen:219 locks:{ Global: { acquireCount: { r: 265, w: 1 } }, Database: { acquireCount: { r: 132, w: 1 } }, Collection: { acquireCount: { r: 132, W: 1 } } } protocol:op_command 443ms
+2015-12-19T11:39:04.026+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:38759 #16 (15 connections now open)
+2015-12-19T11:44:00.739+0330 I NETWORK  [conn6] end connection 192.168.0.53:38740 (14 connections now open)
+2015-12-19T11:44:03.078+0330 I NETWORK  [conn15] end connection 192.168.0.53:38749 (13 connections now open)
+2015-12-19T11:44:04.040+0330 I NETWORK  [conn16] end connection 192.168.0.53:38759 (12 connections now open)
+2015-12-19T12:02:04.696+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:40172 #17 (13 connections now open)
+2015-12-19T12:02:04.743+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:40181 #18 (14 connections now open)
+2015-12-19T12:02:04.781+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:40192 #19 (15 connections now open)
+2015-12-19T12:02:56.017+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:40254 #20 (16 connections now open)
+2015-12-19T12:11:37.540+0330 I NETWORK  [conn20] end connection 192.168.0.53:40254 (15 connections now open)
+2015-12-19T12:12:36.947+0330 I NETWORK  [conn17] end connection 192.168.0.53:40172 (14 connections now open)
+2015-12-19T12:12:37.024+0330 I NETWORK  [conn18] end connection 192.168.0.53:40181 (13 connections now open)
+2015-12-19T12:12:37.058+0330 I NETWORK  [conn19] end connection 192.168.0.53:40192 (12 connections now open)
+2015-12-19T12:15:41.845+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:41020 #21 (13 connections now open)
+2015-12-19T12:15:41.894+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:41029 #22 (14 connections now open)
+2015-12-19T12:15:41.921+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:41038 #23 (15 connections now open)
+2015-12-19T12:15:45.092+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:41048 #24 (16 connections now open)
+2015-12-19T12:20:41.846+0330 I NETWORK  [conn21] end connection 192.168.0.53:41020 (15 connections now open)
+2015-12-19T12:21:01.055+0330 I NETWORK  [conn22] end connection 192.168.0.53:41029 (14 connections now open)
+2015-12-19T12:21:01.110+0330 I NETWORK  [conn23] end connection 192.168.0.53:41038 (13 connections now open)
+2015-12-19T12:21:01.148+0330 I NETWORK  [conn24] end connection 192.168.0.53:41048 (12 connections now open)
+2015-12-19T13:33:00.619+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:45616 #25 (13 connections now open)
+2015-12-19T13:33:00.660+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:45625 #26 (14 connections now open)
+2015-12-19T13:33:00.691+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:45634 #27 (15 connections now open)
+2015-12-19T13:33:32.861+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:45692 #28 (16 connections now open)
+2015-12-19T13:38:14.526+0330 I NETWORK  [conn27] end connection 192.168.0.53:45634 (15 connections now open)
+2015-12-19T13:39:43.917+0330 I NETWORK  [conn28] end connection 192.168.0.53:45692 (14 connections now open)
+2015-12-19T13:39:43.967+0330 I NETWORK  [conn25] end connection 192.168.0.53:45616 (13 connections now open)
+2015-12-19T13:39:44.011+0330 I NETWORK  [conn26] end connection 192.168.0.53:45625 (12 connections now open)
+2015-12-19T14:33:59.690+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:49121 #29 (13 connections now open)
+2015-12-19T14:33:59.744+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:49131 #30 (14 connections now open)
+2015-12-19T14:33:59.780+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:49141 #31 (15 connections now open)
+2015-12-19T14:34:08.040+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:49190 #32 (16 connections now open)
+2015-12-19T14:41:43.169+0330 I NETWORK  [conn30] end connection 192.168.0.53:49131 (15 connections now open)
+2015-12-19T14:41:48.233+0330 I NETWORK  [conn29] end connection 192.168.0.53:49121 (14 connections now open)
+2015-12-19T14:41:53.149+0330 I NETWORK  [conn31] end connection 192.168.0.53:49141 (13 connections now open)
+2015-12-19T14:41:53.231+0330 I NETWORK  [conn32] end connection 192.168.0.53:49190 (12 connections now open)
+2015-12-19T14:47:20.652+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:49984 #33 (13 connections now open)
+2015-12-19T14:47:20.705+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:49994 #34 (14 connections now open)
+2015-12-19T14:47:20.733+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:50004 #35 (15 connections now open)
+2015-12-19T14:47:26.347+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:50015 #36 (16 connections now open)
+2015-12-19T14:48:20.070+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:50089 #37 (17 connections now open)
+2015-12-19T14:50:45.332+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:50258 #38 (18 connections now open)
+2015-12-19T14:50:45.453+0330 I COMMAND  [conn38] command INN.$cmd command: update { update: "origins", updates: [ { q: { _id: ObjectId('564990f748ff160cfc45def8') }, u: { $set: { modified_date: new Date(1450536645270), flight_id: "564990f748ff160cfc45def8", counter: "56653dfdff9f77234e581f53" } }, multi: false, upsert: false } ], ordered: true, shardVersion: [ Timestamp 0|0, ObjectId('00000000ffffffffffffffff') ] } ntoreturn:1 ntoskip:0 keyUpdates:0 writeConflicts:0 numYields:0 reslen:232 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_command 119ms
+2015-12-19T15:08:35.923+0330 I NETWORK  [conn33] end connection 192.168.0.53:49984 (17 connections now open)
+2015-12-19T15:08:45.923+0330 I NETWORK  [conn35] end connection 192.168.0.53:50004 (16 connections now open)
+2015-12-19T15:09:05.941+0330 I NETWORK  [conn34] end connection 192.168.0.53:49994 (15 connections now open)
+2015-12-19T15:09:05.941+0330 I NETWORK  [conn37] end connection 192.168.0.53:50089 (15 connections now open)
+2015-12-19T15:09:15.929+0330 I NETWORK  [conn36] end connection 192.168.0.53:50015 (13 connections now open)
+2015-12-19T15:48:11.602+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:53658 #39 (14 connections now open)
+2015-12-19T15:48:11.654+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:53668 #40 (15 connections now open)
+2015-12-19T15:48:11.690+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:53678 #41 (16 connections now open)
+2015-12-19T15:48:16.999+0330 I NETWORK  [initandlisten] connection accepted from 192.168.0.53:53688 #42 (17 connections now open)
+2015-12-19T16:00:07.313+0330 I NETWORK  [conn41] end connection 192.168.0.53:53678 (16 connections now open)
+2015-12-19T16:01:20.866+0330 I NETWORK  [conn42] end connection 192.168.0.53:53688 (15 connections now open)
+2015-12-19T16:01:20.921+0330 I NETWORK  [conn39] end connection 192.168.0.53:53658 (14 connections now open)
+2015-12-19T16:01:20.962+0330 I NETWORK  [conn40] end connection 192.168.0.53:53668 (13 connections now open)
