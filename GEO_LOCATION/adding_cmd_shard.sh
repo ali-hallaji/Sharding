@@ -20,7 +20,9 @@ db.adminCommand( { addshard : "shard5_3/"+"shard5:57017" } );
 db.adminCommand( { addshard : "shard6_1/"+"shard6:37017" } );
 db.adminCommand( { addshard : "shard6_2/"+"shard6:47017" } );
 db.adminCommand( { addshard : "shard6_3/"+"shard6:57017" } );
+
 db.adminCommand({enableSharding: "INN"});
+
 sh.shardCollection("INN.origins", {"origin_code": 1});
 sh.shardCollection("INN.destinations", {"destination_code": 1});
 
